@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>UMich aKDPhi</title>
+    <meta name="description" content="University of Michigan Lambda Chapter aKDPhi Website">
+  	<link href="/favicon.png" rel="icon">
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway:100" rel="stylesheet">
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  	<link rel="stylesheet" href="static/main.css">
+  	<link href="https://fonts.googleapis.com/css?family=Yesteryear" rel="stylesheet">
+  </head>
+
+  <header class="header">
+  <nav>
+    <input type="checkbox" id="mobile-menu" class="mobile-menu-check">
+    <label for="mobile-menu" class="show-mobile-menu">Menu</label>
+    <ul class="header-nav nav-links">
+    	<li><a href="/">Home</a></li>
+		<li><a href="/about">About</a></li>
+		<li><a href="/gallery">Gallery</a></li>
+		<li class="dropdown">
+  			<span class="drop-trigger">Blog</span>
+  			<ul class="drop-menu">
+      			<li><a href="">{{ post.title }}</a></li>
+      		</ul>
+      	</li>
+		<li><a href="">Newest Post</a></li>
+    </ul>
+  </nav>
+  <a href="/" class="header-logo">
+    <i class="fa fa-diamond fa-2x" aria-hidden="true" style="color: white; size: 150%; padding: 7px"></i>
+  </a>
+</header>
+
+  <body>
+
+    <div class="content-container">
+      <div class="home">
+  <div class="full-hero hero-home">
+    <div class="hero-content hero-font">
+      <h1>alpha Kappa Delta Phi</h1>
+      <h2>University of Michigan</h2>
+      <ul class="social-list">
+        <li>
+          <a href="https://www.facebook.com/akdphiatumich/" class="social-link" target="_blank">
+            <i class="fa fa-facebook"></i>
+          </a>
+        </li>
+        <li>
+          <a href="/about" class="social-link" target="_blank">
+            <i class="fa fa-question-circle" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/umichakdphi/?hl=en" class="social-link" target="_blank">
+            <i class="fa fa-instagram"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="home-callout">
+  <img src="static/akdphiLogo.png" style="width: 16em; height: 14em; padding-left:">
+    <h1 class="callout-title">Timeless <span style="color: purple">Friendship</span> Through <span style="color: purple">Sisterhood</span></h1>
+    <div class="callout-copy">
+      <p style="font-size: 125%;">
+        Welcome to the website of alpha Kappa Delta Phi, Lambda Chapter. alpha Kappa Delta Phi was first founded in 1990 at UC Berkeley, and since then has rapidly expanded internationally.
+      </p> 
+      <p style="font-size: 125%;">
+        In Winter 1995, the Lambda Chapter of aKDPhi was created at the University of Michigan in Ann Arbor, with the mission to promote sisterhood, leadership, scholastic excellence, philanthropy, and Asian-American awareness within the university and the community. Feel free to learn more about our chapter and our organization by browsing the rest of this website.
+      </p>
+    </div>
+  </div>
+
+  <div class="home-section">
+    <h4>Most recent post</h4>
+    <div class="blog-posts">
+      <header class="post-header">
+        <h2>
+          <a href="{{ site.posts.first.url }}">
+          {{ site.posts.first.title }}</a>
+        </h2>
+        <div class="post-byline">
+          <img src="{{ site.posts.first.gravatar }}" />
+          <a href="{{ site.posts.first.authorTwitter }}" 
+          target="_blank" class="social-link">
+            <i class="fa fa-twitter"></i>
+          </a>
+          by: {{ site.posts.first.postAuthor }}
+          <span> - {{ site.posts.first.date | date: '%B %d, %Y' }}</span>
+        </div>
+      </header>
+      <div class="posts-image" 
+      style="background-image:url({{ site.posts.first.postHero }})"></div>
+      {{ site.posts.first.excerpt }}
+    </div>
+  </div>
+
+  <div class="home-section">
+    <h2>THE FOUNDERS</h2>
+    <p>
+      Learn Enough to Be Dangerous was founded in 2015 by Michael Hartl, Lee 
+      Donahoe, and Nick Merwin. We believe that the kind of technical sophistication 
+      taught by the Learn Enough tutorials can benefit at least a billion people, 
+      and probably more.
+    </p>
+
+    <div class="bio-wrapper">
+      <div class="bio-box">
+        <img src="http://placekitten.com/g/400/400" >
+        <h3>Michael Hartl</h3>
+        <a href="http://twitter.com/mhartl" class="social-link" target="_blank">
+          <i class="fa fa-twitter"></i>
+        </a>
+        <div class="bio-copy">
+          <p>
+            Known for his dazzling charm, rapier wit, and unrivaled humility, Michael
+            is the creator of the <a href="http://railstutorial.org/">Ruby on Rails
+            Tutorial</a> and principal author of the 
+            <a href="http://learnenough.com/"> Learn Enough to Be Dangerous</a> 
+            introductory sequence. 
+          </p>
+          <p>
+            Michael is also
+            notorious as the founder of <a href="http://tauday.com/">Tau Day</a> and
+            author of <a href="http://tauday.com/tau-manifesto"><em>The Tau 
+            Manifesto </em></a>, but rumors that he's secretly a supervillain are 
+            slightly exaggerated.
+          </p>
+        </div>
+      </div>
+      <div class="bio-box">
+        <img src="http://placekitten.com/g/400/400" >
+        <h3>Lee Donahoe</h3>
+        <a href="https://twitter.com/leedonahoe" class="social-link" target="_blank">
+          <i class="fa fa-twitter"></i>
+        </a>
+        <div class="bio-copy">
+          <p>
+            When he's not literally swimming with sharks or hunting powder stashes 
+            on his snowboard, you can find Lee in front of his computer designing
+            interfaces, doing front-end development, or writing some of the 
+            interface-related Learn Enough tutorials.
+          </p>
+        </div>
+      </div>
+      <div class="bio-box">
+        <img src="http://placekitten.com/g/400/400" >
+        <h3>Nick Merwin</h3>
+        <a href="https://twitter.com/nickmerwin" class="social-link" target="_blank">
+          <i class="fa fa-twitter"></i>
+        </a>
+        <div class="bio-copy">
+          <p>
+            You may have seen him shredding guitar live with Capital Cities on 
+            Jimmy Kimmel, Conan, or The Ellen Show, but rest assured Nick is a true 
+            nerd at heart. He’s just as happy shredding well-spec'd lines of code 
+            from a tour bus as he is from his kitchen table.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    </div>
+
+<footer class="footer">
+  <a class="footer-logo" href="index.html">
+    <img src="static/akdphiLogo.png" style="width:6em; height:5em">
+  </a>
+  <nav>
+    <ul class="footer-nav nav-links">
+      <li><a href="/">Home</a></li>
+		<li><a href="/about">About</a></li>
+		<li><a href="/gallery">Gallery</a></li>
+		<li class="dropdown">
+  			<span class="drop-trigger">Blog</span>
+  			<ul class="drop-menu">
+      			<li><a href="">{{ post.title }}</a></li>
+      		</ul>
+      	</li>
+		<li><a href="">Newest Post</a></li>
+    </ul>
+  </nav>
+  <h3 style="font-family: 'Yesteryear', cursive;"> alpha Kappa Delta Phi</h3>
+</footer>
+  </body>
+</html>
