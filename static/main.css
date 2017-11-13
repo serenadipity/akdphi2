@@ -22,15 +22,6 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
   line-height: 1;
-  /* The background image with clear div:
-
-    background-image: url("/images/muses.jpg");
-    background-attachment: fixed;
-    background-position: center top;
-    background-repeat: no-repeat;
-    background-size: cover;
-    */
-
 }
 blockquote, q {
   quotes: none;
@@ -60,12 +51,14 @@ a img {
 html {
   box-shadow: 0 0 0 30px #000000 inset;
   padding: 0 30px;
+  background-color: black;
 }
 body {
   display: flex;
   flex-direction: column;
   font-family: 'Open Sans', helvetica, arial, sans;
   min-height: 100vh;
+  background-color: #F0F0F0;
   /*
   background-image: url("/images/muses.jpg");
   background-repeat: no-repeat;
@@ -73,6 +66,13 @@ body {
   background-position: center top;
   background-size: cover;
   */
+  opacity: 1;
+  transition: 1s opacity;
+}
+
+body.fade-out {
+    opacity: 0;
+    transition: none;
 }
 .site-container {
   display: flex;

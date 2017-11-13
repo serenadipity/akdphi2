@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>UMich aKDPhi</title>
+    <meta name="description" content="University of Michigan Lambda Chapter aKDPhi Website">
+    <link href="/favicon.png" rel="icon">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway:100" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Yesteryear" rel="stylesheet">
+  </head>
+
+  <header class="header">
+  <nav>
+    <input type="checkbox" id="mobile-menu" class="mobile-menu-check">
+    <label for="mobile-menu" class="show-mobile-menu">Menu</label>
+    <ul class="header-nav nav-links">
+      <li><a href="../index.html">Home</a></li>
+    <li><a href="../about.html">About</a></li>
+    <li><a href="index.html">Sisters</a></li>
+    <li><a href="/gallery">Gallery</a></li>
+    <li class="dropdown">
+        <span class="drop-trigger">Blog</span>
+        <ul class="drop-menu">
+            <li><a href="">Titel</a></li>
+          </ul>
+        </li>
+    <li><a href="">Newest Post</a></li>
+    </ul>
+  </nav>
+  <a href="/" class="header-logo">
+    <i class="fa fa-diamond fa-2x" aria-hidden="true" style="color: white; size: 150%; padding: 7px"></i>
+  </a>
+</header>
+
+<body>
+<div style="padding-top: 15vh; padding-left: 10vh; padding-right: 10vh; padding-bottom: 15vh; min-height: 74vh">
+<h1>Our Chapter</h1>
+  <div :class="['container', isSelected ? 'container-selected':'', isReady ? 'container-ready':'']" id="app">
+  <div class="team-container">
+    <div class="person-list">
+      <div class="person" v-for="(person,index) in persons" @click="selectPerson(index,$event)"><img class="person-img" :src="person.photo">
+        <div class="person-details">
+          <h2 class="person-title">{{person.name}}</h2>
+          <p class="person-desc">{{person.title}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="team-detail">
+    <div class="team-detail-inner" v-if="isOk">
+      <div class="team-detail-left" :style=`background-image:url(${selectedPersonData.photo})`>
+        <div class="team-detail-photo"><img :src="selectedPersonData.photo" alt="">
+        </div>
+      </div>
+      <div class="team-detail-right">
+        <div class="team-detail-bio">
+          <div class="team-detail-header">
+            <h2 class="person-title">{{selectedPersonData.name}}</h2>
+            <p class="person-desc">{{selectedPersonData.title}}</p>
+            <div class="social">
+              <a :href="selectedPersonData.social.facebook" target="_blank" class="ion-social-facebook"></a>
+              <a :href="selectedPersonData.social.twitter" target="_blank" class="ion-social-twitter"></a>
+              <a href="selectedPersonData.social.linkedin" target="_blank" class="ion-social-linkedin"></a>
+            </div>
+          </div>
+          <div class="team-detail-bio-content" v-html="selectedPersonData.bio">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.4/vue.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/vue-resource/1.2.1/vue-resource.min.js'></script>
+
+    <script  src="js/index.js"></script>
+
+</div>
+
+</body>
+</html>

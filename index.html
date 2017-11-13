@@ -10,6 +10,7 @@
   	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   	<link rel="stylesheet" href="static/main.css">
   	<link href="https://fonts.googleapis.com/css?family=Yesteryear" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </head>
 
   <header class="header">
@@ -18,12 +19,13 @@
     <label for="mobile-menu" class="show-mobile-menu">Menu</label>
     <ul class="header-nav nav-links">
     	<li><a href="/">Home</a></li>
-		<li><a href="/about">About</a></li>
+		<li><a href="about.html">About</a></li>
+    <li><a href="sisters/index.html">Sisters</a></li>
 		<li><a href="/gallery">Gallery</a></li>
 		<li class="dropdown">
   			<span class="drop-trigger">Blog</span>
   			<ul class="drop-menu">
-      			<li><a href="">{{ post.title }}</a></li>
+      			<li><a href="">Title</a></li>
       		</ul>
       	</li>
 		<li><a href="">Newest Post</a></li>
@@ -35,6 +37,7 @@
 </header>
 
   <body>
+  <script>document.body.className += ' fade-out';</script>
 
     <div class="content-container">
       <div class="home">
@@ -175,6 +178,7 @@
     <ul class="footer-nav nav-links">
       <li><a href="/">Home</a></li>
 		<li><a href="/about">About</a></li>
+    <li><a href="/about">Sisters</a></li>
 		<li><a href="/gallery">Gallery</a></li>
 		<li class="dropdown">
   			<span class="drop-trigger">Blog</span>
@@ -188,4 +192,5 @@
   <h3 style="font-family: 'Yesteryear', cursive;"> alpha Kappa Delta Phi</h3>
 </footer>
   </body>
+  <script src="home.js"></script>
 </html>
