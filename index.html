@@ -22,13 +22,7 @@
 		<li><a href="about.html">About</a></li>
     <li><a href="sisters/index.html">Sisters</a></li>
 		<li><a href="/gallery">Gallery</a></li>
-		<li class="dropdown">
-  			<span class="drop-trigger">Blog</span>
-  			<ul class="drop-menu">
-      			<li><a href="">Title</a></li>
-      		</ul>
-      	</li>
-		<li><a href="">Newest Post</a></li>
+		<li><a href="blog.html">Blog</a></li>
     </ul>
   </nav>
   <a href="/" class="header-logo">
@@ -66,7 +60,7 @@
   </div>
 
   <div class="home-callout">
-  <img src="static/akdphiLogo.png" style="width: 16em; height: 14em; padding-left:">
+  <img src="static/akdphiLogo.png" style="width: 16em; height: 14em;">
     <h1 class="callout-title">Timeless <span style="color: purple">Friendship</span> Through <span style="color: purple">Sisterhood</span></h1>
     <div class="callout-copy">
       <p style="font-size: 125%;">
@@ -79,94 +73,51 @@
   </div>
 
   <div class="home-section">
-    <h4>Most recent post</h4>
-    <div class="blog-posts">
-      <header class="post-header">
-        <h2>
-          <a href="{{ site.posts.first.url }}">
-          {{ site.posts.first.title }}</a>
-        </h2>
-        <div class="post-byline">
-          <img src="{{ site.posts.first.gravatar }}" />
-          <a href="{{ site.posts.first.authorTwitter }}" 
-          target="_blank" class="social-link">
-            <i class="fa fa-twitter"></i>
-          </a>
-          by: {{ site.posts.first.postAuthor }}
-          <span> - {{ site.posts.first.date | date: '%B %d, %Y' }}</span>
-        </div>
-      </header>
-      <div class="posts-image" 
-      style="background-image:url({{ site.posts.first.postHero }})"></div>
-      {{ site.posts.first.excerpt }}
-    </div>
-  </div>
-
-  <div class="home-section">
-    <h2>THE FOUNDERS</h2>
-    <p>
-      Learn Enough to Be Dangerous was founded in 2015 by Michael Hartl, Lee 
-      Donahoe, and Nick Merwin. We believe that the kind of technical sophistication 
-      taught by the Learn Enough tutorials can benefit at least a billion people, 
-      and probably more.
-    </p>
-
+    <h2 style="font-size: 4em; color: #340B4E; font-family: 'Yesteryear', cursive;""><b>Our Executive Board</b></h2>
+    <hr class="fancy-line">
     <div class="bio-wrapper">
       <div class="bio-box">
-        <img src="http://placekitten.com/g/400/400" >
-        <h3>Michael Hartl</h3>
-        <a href="http://twitter.com/mhartl" class="social-link" target="_blank">
-          <i class="fa fa-twitter"></i>
-        </a>
+        <img class="circular--landscape img-outline" src="sisters/sisterPics/Erin.jpg" >
+        <h3>Erin Yamaguchi</h3>
         <div class="bio-copy">
-          <p>
-            Known for his dazzling charm, rapier wit, and unrivaled humility, Michael
-            is the creator of the <a href="http://railstutorial.org/">Ruby on Rails
-            Tutorial</a> and principal author of the 
-            <a href="http://learnenough.com/"> Learn Enough to Be Dangerous</a> 
-            introductory sequence. 
-          </p>
-          <p>
-            Michael is also
-            notorious as the founder of <a href="http://tauday.com/">Tau Day</a> and
-            author of <a href="http://tauday.com/tau-manifesto"><em>The Tau 
-            Manifesto </em></a>, but rumors that he's secretly a supervillain are 
-            slightly exaggerated.
-          </p>
+          <h2> President </h2>
         </div>
       </div>
       <div class="bio-box">
-        <img src="http://placekitten.com/g/400/400" >
-        <h3>Lee Donahoe</h3>
-        <a href="https://twitter.com/leedonahoe" class="social-link" target="_blank">
-          <i class="fa fa-twitter"></i>
-        </a>
+        <img class="circular--portrait img-outline" src="sisters/sisterPics/Erica.jpg" >
+        <h3>Erica Tsai</h3>
         <div class="bio-copy">
-          <p>
-            When he's not literally swimming with sharks or hunting powder stashes 
-            on his snowboard, you can find Lee in front of his computer designing
-            interfaces, doing front-end development, or writing some of the 
-            interface-related Learn Enough tutorials.
-          </p>
+          <h2> VP Internal </h2>
         </div>
       </div>
       <div class="bio-box">
-        <img src="http://placekitten.com/g/400/400" >
-        <h3>Nick Merwin</h3>
-        <a href="https://twitter.com/nickmerwin" class="social-link" target="_blank">
-          <i class="fa fa-twitter"></i>
-        </a>
+        <img class="circular--square img-outline" src="sisters/sisterPics/Laurie.jpg" >
+        <h3>Laurie Liu</h3>
         <div class="bio-copy">
-          <p>
-            You may have seen him shredding guitar live with Capital Cities on 
-            Jimmy Kimmel, Conan, or The Ellen Show, but rest assured Nick is a true 
-            nerd at heart. He’s just as happy shredding well-spec'd lines of code 
-            from a tour bus as he is from his kitchen table.
-          </p>
+          <h2> VP External </h2>
+        </div>
+      </div>
+      <div class="bio-box">
+        <img class="circular--portrait img-outline" src="sisters/sisterPics/Erina.jpg" >
+        <h3>Erina Tamada-Wu</h3>
+        <div class="bio-copy">
+          <h2> VP Service </h2>
         </div>
       </div>
     </div>
   </div>
+
+
+
+    <div class="home-callout" style="background-color: #301640">
+    <h1 style="padding-left: 10vh; font-size: 6em; color: #E2D1ED; font-family: 'Yesteryear', cursive;">Rush <span style="color: #E2D1ED"> aKDPhi</span> Winter 2017</h1>
+    <div class="callout-copy2">
+      <iframe style=" max-width: 500px;
+  padding-right: 5vh;"width="560" height="315" src="https://www.youtube.com/embed/by4ZXss2PdA" frameborder="0" allowfullscreen></iframe>
+     
+    </div>
+  </div>
+
 </div>
     </div>
 
@@ -180,13 +131,7 @@
 		<li><a href="/about">About</a></li>
     <li><a href="/about">Sisters</a></li>
 		<li><a href="/gallery">Gallery</a></li>
-		<li class="dropdown">
-  			<span class="drop-trigger">Blog</span>
-  			<ul class="drop-menu">
-      			<li><a href="">{{ post.title }}</a></li>
-      		</ul>
-      	</li>
-		<li><a href="">Newest Post</a></li>
+		<li><a href="">Blog</a></li>
     </ul>
   </nav>
   <h3 style="font-family: 'Yesteryear', cursive;"> alpha Kappa Delta Phi</h3>

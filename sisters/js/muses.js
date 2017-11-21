@@ -12,70 +12,6 @@ const persons = [
     }
   },
   {
-    name: "Ashley Miu",
-    photo: "../sisters/sisterPics/Ashley.jpg",
-    title: "Nursing",
-    bio:
-      "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet architecto ea blanditiis quo labore esse magnam illum ut quibusdam. Corrupti ratione iure aliquam adipisci! Harum vitae laboriosam temporibus illo suscipit?</p><p>Saepe repudiandae rerum quam ut perferendis, ullam similique nemo quod, assumenda mollitia consectetur. Eveniet optio maxime perferendis odit possimus? Facilis architecto nesciunt doloribus consectetur culpa veritatis accusamus expedita quos voluptate!</p><p>Nisi provident minus possimus optio voluptate rem, perspiciatis, placeat, culpa aperiam quod temporibus.</p>",
-    social: {
-      facebook: "#",
-      twitter: "https://twitter.com/knyttneve",
-      linkedin: "#"
-    }
-  },
-  {
-    name: "Paul Wilson",
-    photo: "http://www.designskilz.com/random-users/images/imageM11.jpg",
-    title: "UI Designer",
-    bio:
-      "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet architecto ea blanditiis quo labore esse magnam illum ut quibusdam. Corrupti ratione iure aliquam adipisci! Harum vitae laboriosam temporibus illo suscipit?</p><p>Saepe repudiandae rerum quam ut perferendis, ullam similique nemo quod, assumenda mollitia consectetur. Eveniet optio maxime perferendis odit possimus? Facilis architecto nesciunt doloribus consectetur culpa veritatis accusamus expedita quos voluptate!</p><p>Nisi provident minus possimus optio voluptate rem, perspiciatis, placeat, culpa aperiam quod temporibus.</p>",
-    social: {
-      facebook: "#",
-      twitter: "https://twitter.com/knyttneve",
-      linkedin: "#"
-    }
-  },
-  {
-    name: "Paul Wilson",
-    photo: "http://www.designskilz.com/random-users/images/imageM11.jpg",
-    title: "UI Designer",
-    bio:
-      "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet architecto ea blanditiis quo labore esse magnam illum ut quibusdam. Corrupti ratione iure aliquam adipisci! Harum vitae laboriosam temporibus illo suscipit?</p><p>Saepe repudiandae rerum quam ut perferendis, ullam similique nemo quod, assumenda mollitia consectetur. Eveniet optio maxime perferendis odit possimus? Facilis architecto nesciunt doloribus consectetur culpa veritatis accusamus expedita quos voluptate!</p><p>Nisi provident minus possimus optio voluptate rem, perspiciatis, placeat, culpa aperiam quod temporibus.</p>",
-    social: {
-      facebook: "#",
-      twitter: "https://twitter.com/knyttneve",
-      linkedin: "#"
-    }
-  },
-  {
-    name: "Paul Wilson",
-    photo: "http://www.designskilz.com/random-users/images/imageM11.jpg",
-    title: "UI Designer",
-    bio:
-      "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet architecto ea blanditiis quo labore esse magnam illum ut quibusdam. Corrupti ratione iure aliquam adipisci! Harum vitae laboriosam temporibus illo suscipit?</p><p>Saepe repudiandae rerum quam ut perferendis, ullam similique nemo quod, assumenda mollitia consectetur. Eveniet optio maxime perferendis odit possimus? Facilis architecto nesciunt doloribus consectetur culpa veritatis accusamus expedita quos voluptate!</p><p>Nisi provident minus possimus optio voluptate rem, perspiciatis, placeat, culpa aperiam quod temporibus.</p>",
-    social: {
-      facebook: "#",
-      twitter: "https://twitter.com/knyttneve",
-      linkedin: "#"
-    }
-  }
-
-];
-
-const muses = [
-  {
-    name: "Serena Chan",
-    photo: "../sisters/sisterPics/Serena.jpg",
-    title: "Computer Science",
-    bio:
-      "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet architecto ea blanditiis quo labore esse magnam illum ut quibusdam. Corrupti ratione iure aliquam adipisci! Harum vitae laboriosam temporibus illo suscipit?</p><p>Saepe repudiandae rerum quam ut perferendis, ullam similique nemo quod, assumenda mollitia consectetur. Eveniet optio maxime perferendis odit possimus? Facilis architecto nesciunt doloribus consectetur culpa veritatis accusamus expedita quos voluptate!</p><p>Nisi provident minus possimus optio voluptate rem, perspiciatis, placeat, culpa aperiam quod temporibus.</p>",
-    social: {
-      facebook: "#",
-      twitter: "https://twitter.com/knyttneve",
-      linkedin: "#"
-    }
-  },
-  {
     name: "Janet Lin",
     photo: "../sisters/sisterPics/Janet.jpg",
     title: "Business",
@@ -150,7 +86,7 @@ const app = new Vue({
     };
   },
   methods: {
-    selectPerson(className, index, el) {
+    selectPerson(index, el) {
       if (!this.isOk) {
         this.selectedPersonIndex = index;
         this.isSelected = true;
@@ -163,7 +99,7 @@ const app = new Vue({
           "style",
           `width:${this.selectedPerson.offsetWidth}px;`
         );
-        this.selectedPersonData = className[index];
+        this.selectedPersonData = this.persons[index];
         window.setTimeout(() => {
           this.inlineStyles = `width:${this.selectedPerson
             .offsetWidth}px;height:${this.selectedPerson
